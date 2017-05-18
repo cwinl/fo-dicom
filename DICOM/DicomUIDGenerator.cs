@@ -1,6 +1,8 @@
 ﻿// Copyright (c) 2012-2017 fo-dicom contributors.
 // Licensed under the Microsoft Public License (MS-PL).
 
+using System.Numerics;
+
 namespace Dicom
 {
     using System;
@@ -114,7 +116,7 @@ namespace Dicom
         public static DicomUID GenerateDerivedFromUUID()
         {            
             var guid = Guid.NewGuid().ToByteArray();
-            var bigint = new System.Numerics.BigInteger(guid);
+            var bigint = new BigInteger(guid);
             if (bigint < 0) bigint = -bigint;
             var uid = "2.25." + bigint;
 

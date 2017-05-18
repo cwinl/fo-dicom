@@ -5,13 +5,8 @@ namespace Dicom.IO.Writer
 {
     using System;
     using System.IO;
-
-#if NET35
-    using Unity.IO.Compression;
-#else
     using System.IO.Compression;
     using System.Threading.Tasks;
-#endif
 
     /// <summary>
     /// Writer for DICOM Part 10 objects.

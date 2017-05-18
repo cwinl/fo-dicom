@@ -8,13 +8,8 @@ namespace Dicom.IO.Reader
     using System.IO;
     using System.Linq;
     using System.Text;
-
-#if NET35
-    using Unity.IO.Compression;
-#else
     using System.IO.Compression;
     using System.Threading.Tasks;
-#endif
 
     using Dicom.Imaging.Mathematics;
     using Dicom.IO.Buffer;
